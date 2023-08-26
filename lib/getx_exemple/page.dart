@@ -45,7 +45,7 @@ class MyHomePage extends GetView<CounterController> {
               'You have pushed the button this many times:',
             ),
             Obx(() => Text(
-                  '${controller.counter}',
+                  '${controller.count}',
                   style: Theme.of(context).textTheme.headlineMedium,
                 )),
           ],

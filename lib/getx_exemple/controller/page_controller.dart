@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:revision_app/helper/counter.dart';
 
 class CounterController extends GetxController {
 // String for changing the Store Name
@@ -17,10 +18,13 @@ class CounterController extends GetxController {
   final reviewEditingController = TextEditingController();
   final followerController = TextEditingController();
   final reviewNameController = TextEditingController();
+  final counter = Counter();
 
-  var counter = 0.obs;
+  var count = 0.obs;
 
   void incrementCounter() {
-    counter++;
+    counter.incrementCounter();
+
+    count.value = counter.count;
   }
 }
